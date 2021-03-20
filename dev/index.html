@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>&lt;my-element> Demo</title>
+  <script type="module" src="../repeatable.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <style>
+    p {
+      border: solid 1px blue;
+      padding: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="section">
+    <div class="container">
+      <mb-repeatable replace="{{x}}">
+        <template slot="content">
+          <div class="box">
+            <h1 class="title" path="{{x}}">
+              Hello there!!
+              Something should be before this..
+            </h1>
+          </div>    
+          <div class="box">
+            <h1 class="title" path="{{x}}">
+              Hello there!!
+              Something should be before this..
+            </h1>
+          </div>
+        </template>
+        <button class="button" slot="add">Add more</button>
+        <button class="button" slot="remove">Delete</button>
+      </mb-repeatable>
+    </div>
+  </div>
+</body>
+
+</html>
